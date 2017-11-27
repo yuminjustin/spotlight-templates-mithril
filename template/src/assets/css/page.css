@@ -1,0 +1,47 @@
+h1 {
+    line-height: 64px;
+    text-align: center;
+}
+
+._nav {
+    line-height: 32px;
+    padding: 5px 20px;
+    background: #333;
+    color: #fff;
+}
+
+._nav a,
+._nav button {
+    padding: 3px 8px;
+    border-radius: 3px;
+    height: 30px;
+    line-height: 30px;
+}
+
+._nav a {
+    background: #fff;
+    display: inline;
+    margin: 0 12px;
+}
+
+._nav button {
+    display: block;
+    float: right;
+    background: rgb(87, 185, 6);
+    color: #fff;
+}
+
+._index {
+    text-align: center;
+}
+
+.error_404 {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.error_404 p {
+    line-height: 36px;
+    font-size: 16px;
+    color: #333;
+}
