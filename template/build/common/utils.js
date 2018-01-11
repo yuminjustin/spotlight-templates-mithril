@@ -75,6 +75,14 @@ exports.resolve = function (dir) {
     return path.join(__dirname, '..', dir)
 }
 
+otherChuks = function (key, obj) {
+    var arr = []
+    for (var i in obj) {
+        if (i != key) arr.push(i)
+    }
+    return arr;
+}
+
 exports.HtmlWPMaker = function (config) {
     var arr = []
     for (var i in config.htmlOption) {
@@ -94,11 +102,8 @@ exports.HtmlWPMaker = function (config) {
                 removeAttributeQuotes: true
             }
             temp.chunksSortMode = 'dependency'
-            // 多入口时 在配置中定义exclude 去屏蔽其他 chuck
-            // eg.  exclude: ['app']
-            if(config.htmlOption[i].exclude){
-                temp.excludeChunks = config.htmlOption[i].exclude
-            }
+            // 屏蔽其它入口
+            temp.excludeChunks = otherChuks(i, config.htmlOption);
         }
         arr.push(new HtmlWebpackPlugin(temp))
     }
