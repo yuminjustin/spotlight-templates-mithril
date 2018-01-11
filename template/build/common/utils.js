@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 exports.assetsPath = function (_path) {
-    var _dir = process.env.NODE_ENV === 'production' ? 'static' : 'static'
+    var _dir = process.env.NODE_ENV === 'production' ? './static' : 'static'
     return path.posix.join(_dir, _path)
 }
 
@@ -34,6 +34,7 @@ exports.cssLoaders = function (options) {
         if (options.extract) {
             return ExtractTextPlugin.extract({
                 use: loaders,
+                publicPath: '../../',
                 fallback: 'style-loader'
             })
         } else {
