@@ -1,8 +1,8 @@
-import 'babel-polyfill';
+import '@babel/polyfill';
 import Router from './route'
 import Navigation from 'C/nav'
-import '@/assets/css/reset.css';
-import '@/assets/css/page.css';
+import 'B/assets/css/reset.css';
+import 'B/assets/css/page.css';
 
 
 const root = document.querySelector("#app"),
