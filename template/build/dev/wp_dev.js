@@ -53,6 +53,9 @@ var _dev = config.dev,
             },
             stats: {
                 colors: true
+            },
+            before: function (app) {
+                config.dev.serverHandler && config.dev.serverHandler(app)
             }
         }
     }
