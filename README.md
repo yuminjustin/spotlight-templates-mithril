@@ -3,7 +3,7 @@ spotlight scaffold template for [mithril](https://mithril.js.org/)<br>
 
 ## Use：
 
-     spotlight init mithril my-project
+     spotlight mithril my-project
 
      cd my-project
 
