@@ -1,4 +1,4 @@
-## spotlight-templates-normal
+## spotlight-templates-mithril
 spotlight scaffold template for [mithril](https://mithril.js.org/)<br>
 
 ## Use：
