@@ -2,7 +2,6 @@ import '@babel/polyfill';
 import Router from './route'
 import Navigation from 'C/nav'
 import 'B/assets/css/reset.css';
-import 'B/assets/css/page.css';
 
 
 const root = document.querySelector("#app"),
