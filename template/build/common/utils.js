@@ -60,13 +60,23 @@ exports.HtmlWPMaker = function (config) {
 exports.styleLoaders = function (isdev) {
     isdev = isdev || !1;
     return [{
-        test: /\.css$/,
-        use: [
-            isdev ? 'style-loader' : MiniCssExtractPlugin.loader,
-            'css-loader',
-            'postcss-loader'
-        ]
-    }]
+            test: /\.css$/,
+            include: [/node_modules/],
+            use: [
+                isdev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                'css-loader'
+            ]
+        },
+        {
+            test: /\.css$/,
+            include: [/src/],
+            use: [
+                isdev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                'css-loader?modules&localIdentName=[local]_[hash:base64:5]',
+                'postcss-loader'
+            ]
+        }
+    ]
 }
 
 exports.filenames = function (type) {
