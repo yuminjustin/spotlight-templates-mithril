@@ -1,3 +1,4 @@
+import style from 'B/assets/css/page.css';
 const state = {
     count: 0,
     inc() {
@@ -7,7 +8,7 @@ const state = {
 
 export default {
     view: () => m('div', {
-        "class": "_nav"
+        "class": style._nav
     }, 'Navigation', [
         m("a", {
             href: "#!/"
