@@ -26,9 +26,7 @@ var _build = config.build,
             new webpack.DefinePlugin({
                 'process.env': _build.env
             }),
-            new CleanWebpackPlugin(_build.outputPathName, {
-                root: path.resolve(__dirname, '../../')
-            }),
+            new CleanWebpackPlugin(),
             new MiniCssExtractPlugin(utils.filenames('css')),
             new CopyWebpackPlugin([{
                 from: _build.static,
