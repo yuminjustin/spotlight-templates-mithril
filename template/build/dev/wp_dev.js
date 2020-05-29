@@ -34,7 +34,7 @@ var _dev = config.dev,
             historyApiFallback: _dev.html5Router,
             hot: true,
             compress: true,
-            host: 'localhost',
+            host: '0.0.0.0',
             port: _dev.port,
             open: true,
             overlay: { //当有编译错误或者警告的时候显示一个全屏overlay
