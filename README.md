@@ -19,6 +19,6 @@ This template is base on webpack, support for mithriljs <br>
 1.配置在build/config.js 当中；<br>
   Configures in build/config.js <br><br>
 
-2.Upgrade to webpack4
+2.Upgrade to webpack5
 
 enjoy!

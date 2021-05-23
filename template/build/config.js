@@ -7,6 +7,7 @@ module.exports = {
     entry: { // 入口 (多)
         app: ['./src/main.js']
     },
+    cssModule: true, // css module
     build: { // 生产环境
         env: '"production"',
         static: path.resolve(__dirname, '../static'), //资源目录
@@ -29,6 +30,7 @@ module.exports = {
         publicPath: "/",
         static: 'static',
         outputPath: path.resolve(__dirname, outputPath), // 临时
+        host: 'localhost',
         port: '3001',
         html5Router: false, // html5 router 
         htmlOption: { // 对应 entry

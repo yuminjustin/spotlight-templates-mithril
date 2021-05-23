@@ -1,14 +1,14 @@
 /* 生成环境  可扩展其余操作 */
-var shell = require('shelljs');
-var ora = require('ora')
-var chalk = require('chalk')
+let shell = require('shelljs');
+let ora = require('ora')
+let chalk = require('chalk')
 
-var spinner = ora('开始打包,请稍后...')
+let spinner = ora('开始打包,请稍后...')
 spinner.start()
 
-shell.exec('webpack --config build/prod/wp_prod.js', {
+shell.exec('cross-env NODE_ENV=production webpack --config build/prod/prod.js', {
     silent: true
-}, function (code, stdout, stderr) {
+}, (code, stdout, stderr) => {
     spinner.stop()
     if (code == 0) {
         console.log(chalk.green(stdout))
